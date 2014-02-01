@@ -51,10 +51,11 @@ Now you just need to allow the connection of the mission system by doing this.
  
 Go to server_monitor.sqf located in the system folder in your server.pbo
 
-* search for allowConnection = true; and add the line shown below *
+* search for allowConnection = true; and add the line shown below 
 
     
     [] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+    
     allowConnection = true;
     
     
