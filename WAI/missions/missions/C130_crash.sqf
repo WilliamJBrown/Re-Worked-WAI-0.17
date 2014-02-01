@@ -9,39 +9,13 @@ _baserunover = createVehicle ["C130J_wreck_EP1",[(_position select 0), (_positio
 _box = createVehicle ["RUBasicWeaponsBox",[(_position select 0) + 15,(_position select 1) + 5,0], [], 0, "CAN_COLLIDE"];
 [_box] call Small_Gun_box;
 
-[[_position select 0, _position select 1, 0],                  //position
-3,						  //Number Of units
-1,					      //Skill level 0-1. Has no effect if using custom skills
-"Random",			      //Primary gun set number. "Random" for random weapon set.
-4,						  //Number of magazines
-"",						  //Backpack "" for random or classname here.
-"Bandit2_DZ",						  //Skin "" for random or classname here.
-"Random",				  //Gearset number. "Random" for random gear set.
-true						// mission true
-] call spawn_group;
 
-[[_position select 0, _position select 1, 0],                  //position
-3,						  //Number Of units
-1,					      //Skill level 0-1. Has no effect if using custom skills
-"Random",			      //Primary gun set number. "Random" for random weapon set.
-4,						  //Number of magazines
-"",						  //Backpack "" for random or classname here.
-"Bandit2_DZ",						  //Skin "" for random or classname here.
-"Random",				  //Gearset number. "Random" for random gear set.
-true						// mission true
-] call spawn_group;
+[[_position select 0, _position select 1, 0],3,1,"Random",4,"","Bandit2_DZ","Random",true] call spawn_group;
+
+[[_position select 0, _position select 1, 0],3,1,"Random",4,"","Bandit2_DZ","Random",true] call spawn_group;
 
 //Turrets
-[[[(_position select 0) + 10, (_position select 1) + 10, 0],[(_position select 0) + 10, (_position select 1) - 10, 0]], //position(s) (can be multiple).
-"M2StaticMG",             //Classname of turret
-0.8,					  //Skill level 0-1. Has no effect if using custom skills
-"Bandit2_DZ",			  //Skin "" for random or classname here.
-0,						  //Primary gun set number. "Random" for random weapon set. (not needed if ai_static_useweapon = False)
-2,						  //Number of magazines. (not needed if ai_static_useweapon = False)
-"",						  //Backpack "" for random or classname here. (not needed if ai_static_useweapon = False)
-"Random",				  //Gearset number. "Random" for random gear set. (not needed if ai_static_useweapon = False)
-true
-] call spawn_static;
+[[[(_position select 0) + 10, (_position select 1) + 10, 0],[(_position select 0) + 10, (_position select 1) - 10, 0]],"M2StaticMG",0.8,"Bandit2_DZ",0,2,"","Random",true] call spawn_static;
 
 [_position] execVM "\z\addons\dayz_server\WAI\missions\compile\markers.sqf";
 [nil,nil,rTitleText,"A C-130 carrying medical supplies has crashed and bandits are securing the site! Check your map for the location!", "PLAIN",10] call RE;

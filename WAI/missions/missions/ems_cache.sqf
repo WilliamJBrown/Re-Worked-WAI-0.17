@@ -25,38 +25,11 @@ _objPosition = getPosATL _veh;
 
 //Troops
 _rndnum = round (random 3) + 4;
-[[_position select 0, _position select 1, 0],              //position
-_rndnum,						  //Number Of units
-1,					      //Skill level 0-1. Has no effect if using custom skills
-"Random",			      //Primary gun set number. "Random" for random weapon set.
-6,						  //Number of magazines
-"",						  //Backpack "" for random or classname here.
-"Bandit2_DZ",			  //Skin "" for random or classname here.
-"Random",				  //Gearset number. "Random" for random gear set.
-true
-] call spawn_group;
+[[_position select 0, _position select 1, 0],_rndnum,1,"Random",6,"","Bandit2_DZ","Random",true] call spawn_group;
      
-[[_position select 0, _position select 1, 0],                 //position
-4,						  //Number Of units
-1,					      //Skill level 0-1. Has no effect if using custom skills
-"Random",			      //Primary gun set number. "Random" for random weapon set.
-4,						  //Number of magazines
-"",						  //Backpack "" for random or classname here.
-"Bandit2_DZ",			  //Skin "" for random or classname here.
-"Random",				  //Gearset number. "Random" for random gear set.
-true
-] call spawn_group;
+[[_position select 0, _position select 1, 0],4,1,"Random",4,"","Bandit2_DZ","Random",true] call spawn_group;
 
-[[[(_position select 0), (_position select 1) + 30, 0],[(_position select 0) + 30, (_position select 1), 0]], //position(s) (can be multiple).
-"M2StaticMG",             //Classname of turret
-0.8,					  //Skill level 0-1. Has no effect if using custom skills
-"Bandit2_DZ",			  //Skin "" for random or classname here.
-2,						  //Primary gun set number. "Random" for random weapon set. (not needed if ai_static_useweapon = False)
-2,						  //Number of magazines. (not needed if ai_static_useweapon = False)
-"",						  //Backpack "" for random or classname here. (not needed if ai_static_useweapon = False)
-"Random",				  //Gearset number. "Random" for random gear set. (not needed if ai_static_useweapon = False)
-true
-] call spawn_static;
+[[[(_position select 0), (_position select 1) + 30, 0],[(_position select 0) + 30, (_position select 1), 0]],"M2StaticMG",0.8,"Bandit2_DZ",2,2,"","Random",true] call spawn_static;
 
 
 [_position,"Weapon cache"] execVM "\z\addons\dayz_server\WAI\missions\compile\markers.sqf";
