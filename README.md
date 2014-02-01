@@ -33,7 +33,9 @@ Current Development done by williamjbrown, firefly, fuchs
 **Requirements:**
 
 *Notepad++
+
 *PBO Manager
+
 *Epoch 1.0.4 Server
 
 **Difficulty**
