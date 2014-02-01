@@ -6,7 +6,7 @@ Credits: Markk311, Lazyink, TheSzerdi, Falcyn , TAWTonic, EPOCH DEV's
 
 Current Development done by williamjbrown, firefly, fuchs
 
-* Current Version 0.16 
+* Current Version based on 0.16 
 * Wicked Mission System  Features (WIP)
 * Adds more options to ammo boxes 
 * tweaks to missions 
