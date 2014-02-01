@@ -66,40 +66,40 @@ _cleanmission = false;
 _playerPresent = false;
 _starttime = floor(time);
 while {_missiontimeout} do {
-sleep 5;
-_currenttime = floor(time);
-{if((isPlayer _x) AND (_x distance _position <= 150)) then {_playerPresent = true};}forEach playableUnits;
-if (_currenttime - _starttime >= wai_mission_timeout) then {_cleanmission = true;};
-if ((_playerPresent) OR (_cleanmission)) then {_missiontimeout = false;};
+	sleep 5;
+	_currenttime = floor(time);
+	{if((isPlayer _x) AND (_x distance _position <= 150)) then {_playerPresent = true};}forEach playableUnits;
+	if (_currenttime - _starttime >= wai_mission_timeout) then {_cleanmission = true;};
+	if ((_playerPresent) OR (_cleanmission)) then {_missiontimeout = false;};
 };
 if (_playerPresent) then {
-waitUntil
-{
-sleep 5;
-_playerPresent = false;
-{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
-(_playerPresent)
-};
-diag_log format["WAI: Mission BaseBandit Ended At %1",_position];
-[nil,nil,rTitleText,"Survivors captured the base, HOORA!!", "PLAIN",10] call RE;
+	waitUntil
+	{
+		sleep 5;
+		_playerPresent = false;
+		{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
+		(_playerPresent)
+	};
+	diag_log format["WAI: Mission BaseBandit Ended At %1",_position];
+	[nil,nil,rTitleText,"Survivors captured the base, HOOAH!!", "PLAIN",10] call RE;
 } else {
-clean_running_mission = True;
-deleteVehicle _box;
-{_cleanunits = _x getVariable "missionclean";
-if (!isNil "_cleanunits") then {
-switch (_cleanunits) do {
-case "ground" : {ai_ground_units = (ai_ground_units -1);};
-case "air" : {ai_air_units = (ai_air_units -1);};
-case "vehicle" : {ai_vehicle_units = (ai_vehicle_units -1);};
-case "static" : {ai_emplacement_units = (ai_emplacement_units -1);};
-};
-deleteVehicle _x;
-sleep 0.05;
-};
-} forEach allUnits;
+	clean_running_mission = True;
+	deleteVehicle _box;
+	{_cleanunits = _x getVariable "missionclean";
+	if (!isNil "_cleanunits") then {
+		switch (_cleanunits) do {
+			case "ground" :  {ai_ground_units = (ai_ground_units -1);};
+			case "air" :     {ai_air_units = (ai_air_units -1);};
+			case "vehicle" : {ai_vehicle_units = (ai_vehicle_units -1);};
+			case "static" :  {ai_emplacement_units = (ai_emplacement_units -1);};
+		};
+		deleteVehicle _x;
+		sleep 0.05;
+	};
+	} forEach allUnits;
  
-diag_log format["WAI: Mission Base Bandit At %1",_position];
-[nil,nil,rTitleText,"The survivors were unable to capture the base time is up!", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Base Bandit At %1",_position];
+	[nil,nil,rTitleText,"The survivors were unable to capture the base time is up!", "PLAIN",10] call RE;
 };
  
 missionrunning = false;

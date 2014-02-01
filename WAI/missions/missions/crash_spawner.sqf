@@ -157,10 +157,10 @@ if (_playerPresent) then {
 	{_cleanunits = _x getVariable "missionclean";
 	if (!isNil "_cleanunits") then {
 		switch (_cleanunits) do {
-			case "ground" : {ai_ground_units = (ai_ground_units -1);};
-			case "air" : {ai_air_units = (ai_air_units -1);};
+			case "ground" :  {ai_ground_units = (ai_ground_units -1);};
+			case "air" :     {ai_air_units = (ai_air_units -1);};
 			case "vehicle" : {ai_vehicle_units = (ai_vehicle_units -1);};
-			case "static" : {ai_emplacement_units = (ai_emplacement_units -1);};
+			case "static" :  {ai_emplacement_units = (ai_emplacement_units -1);};
 		};
 		deleteVehicle _x;
 		sleep 0.05;

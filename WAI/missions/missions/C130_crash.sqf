@@ -45,7 +45,6 @@ if (_playerPresent) then {
 	[nil,nil,rTitleText,"Survivors have secured the crashed C130!", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
-	deleteVehicle _veh;
 	deleteVehicle _box;
 	{_cleanunits = _x getVariable "missionclean";
 	if (!isNil "_cleanunits") then {
