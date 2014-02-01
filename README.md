@@ -65,3 +65,10 @@ Go to server_monitor.sqf located in the system folder in your server.pbo
 Understanding  BIS_fnc_findSafePos
 
     http://tactical.nekromantix.com/wiki/doku.php?id=arma2:scripting:bis_fnc_findsafepos
+	
+*Already ported EMS Missions:
+
+Major : SM1,2,3,5
+
+
+Minor : None	

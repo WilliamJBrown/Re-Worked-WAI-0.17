@@ -18,7 +18,7 @@ clearWeaponCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;
 _veh setVariable ["ObjectID","1",true];
 PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
-diag_log format["WAI: EMS ported Mission Weapon Cache spawned a %1",_vehname];
+diag_log format["WAI: Mission Weapon Cache spawned a %1",_vehname];
 
 _objPosition = getPosATL _veh;
 //[_veh,[_vehdir,_objPosition],_vehclass,true,"0"] call custom_publish;
@@ -34,8 +34,6 @@ _rndnum = round (random 3) + 4;
 
 [_position,"Weapon cache"] execVM "\z\addons\dayz_server\WAI\missions\compile\markers.sqf";
 [nil,nil,rTitleText,"Bandits have obtained a weapon crate! Check your map for the location!", "PLAIN",10] call RE;
-    playSound "beep";
-    sleep 0.5;
 
 _missiontimeout = true;
 _cleanmission = false;
@@ -56,8 +54,8 @@ if (_playerPresent) then {
 		{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
 		(_playerPresent)
 	};
-	diag_log format["WAI: Mission Weapon cache Ended At %1",_position];
-	[nil,nil,rTitleText,"Survivors have secured the Weapon Cache!", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Weapon Cache Ended At %1",_position];
+	[nil,nil,rTitleText,"Survivors have secured the weapon cache!", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
 	deleteVehicle _box;
@@ -74,8 +72,8 @@ if (_playerPresent) then {
 	};	
 	} forEach allUnits;
 	
-	diag_log format["WAI: Mission Weapon cache timed out At %1",_position];
-	[nil,nil,rTitleText,"Survivors did not secure the Weapon Cache in time!", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Weapon Cache timed out At %1",_position];
+	[nil,nil,rTitleText,"Survivors did not secure the weapon cache in time!", "PLAIN",10] call RE;
 };
 
 missionrunning = false;
