@@ -30,22 +30,22 @@ Current Development done by williamjbrown, firefly, fuchs
 * Missions have a timeout if no player is in the area
 
 
-Requirements:
+**Requirements:**
 
-Notepad++
-PBO Manager
-Epoch 1.0.4 Server
+*Notepad++
+*PBO Manager
+*Epoch 1.0.4 Server
 
-Difficulty
+**Difficulty**
 
 Easy : 5-10 minutes
 
 Some knowledge of Epoch Server & Mission file locations
 How to use PBO manager to unpack and pack PBO files
 
-Installation Instructions
+## Installation Instructions
 
-dayz_server PBO Instructions
+### dayz_server PBO Instructions
 
 Now you just need to allow the connection of the mission system by doing this. 
  

@@ -67,7 +67,7 @@ if (_playerPresent) then {
 		{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
 		(_playerPresent)
 	};
-	diag_log format["WAI: Mission Wepaon cache Ended At %1",_position];
+	diag_log format["WAI: Mission Weapon cache Ended At %1",_position];
 	[nil,nil,rTitleText,"Survivors have secured the Wepaon Cache!", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
@@ -85,8 +85,8 @@ if (_playerPresent) then {
 	};	
 	} forEach allUnits;
 	
-	diag_log format["WAI: Mission Wepaon cache timed out At %1",_position];
-	[nil,nil,rTitleText,"Survivors did not secure the Wepaon Cache in time!", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Weapon cache timed out At %1",_position];
+	[nil,nil,rTitleText,"Survivors did not secure the Weapon Cache in time!", "PLAIN",10] call RE;
 };
 
 missionrunning = false;
