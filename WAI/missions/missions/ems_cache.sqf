@@ -5,7 +5,7 @@ _vehclass = ["SUV_Camo","UAZ_Unarmed_UN_EP1"] call BIS_fnc_selectRandom;
 
 _vehname	= getText (configFile >> "CfgVehicles" >> _vehclass >> "displayName");
 _position = [getMarkerPos "center",0,5800,10,0,200,0] call BIS_fnc_findSafePos;
-diag_log format["WAI: Mission Weapon Cache1 Started At %1",_position];
+diag_log format["WAI: Mission Weapon Cache Started At %1",_position];
 
 _box = createVehicle ["BAF_VehicleBox",[(_position select 0) - 40,(_position select 1) - 40,0], [], 0, "CAN_COLLIDE"];
 [_box] call Medium_Gun_Box;
@@ -56,7 +56,7 @@ if (_playerPresent) then {
 		{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
 		(_playerPresent)
 	};
-	diag_log format["WAI: Mission Weapon cache1 Ended At %1",_position];
+	diag_log format["WAI: Mission Weapon cache Ended At %1",_position];
 	[nil,nil,rTitleText,"Survivors have secured the Weapon Cache!", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
