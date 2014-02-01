@@ -28,3 +28,36 @@ Current Development done by williamjbrown, firefly, fuchs
 * No need for extra install Map markers refresh so JIP players will have them on map 
 * Uses wasteland like missions 
 * Missions have a timeout if no player is in the area
+
+
+Requirements:
+
+Notepad++
+PBO Manager
+Epoch 1.0.4 Server
+
+Difficulty
+
+Easy : 5-10 minutes
+
+Some knowledge of Epoch Server & Mission file locations
+How to use PBO manager to unpack and pack PBO files
+
+Installation Instructions
+
+dayz_server PBO Instructions
+
+Now you just need to allow the connection of the mission system by doing this. 
+ 
+Go to server_monitor.sqf located in the system folder in your server.pbo
+
+    allowConnection = true;
+    
+    [] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+    allowConnection = true;
+    
+    
+    
+Understanding  BIS_fnc_findSafePos
+
+    http://tactical.nekromantix.com/wiki/doku.php?id=arma2:scripting:bis_fnc_findsafepos
