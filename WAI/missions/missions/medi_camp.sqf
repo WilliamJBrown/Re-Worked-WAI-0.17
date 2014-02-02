@@ -1,33 +1,28 @@
-//Mayors Mansion
+//Medical Supply Camp
 
 private ["_position","_box","_missiontimeout","_cleanmission","_playerPresent","_starttime","_currenttime","_cleanunits","_rndnum"];
 vehclass = military_unarmed call BIS_fnc_selectRandom;
  
-_position = [getMarkerPos "center",0,5500,10,0,2000,0] call BIS_fnc_findSafePos;
+_position = [getMarkerPos "center",0,3200,10,0,20,0] call BIS_fnc_findSafePos;
 
 //Large Gun Box
-_box = createVehicle ["BAF_VehicleBox",[(_position select 0),(_position select 1), .5], [], 0, "CAN_COLLIDE"];
-[_box] call Large_Gun_Box;
+_box = createVehicle ["BAF_VehicleBox",[(_position select 0) + 15,(_position select 1) + 5,0], [], 0, "CAN_COLLIDE"];
+[_box] call Large_Gun_Box;              
  
-diag_log format["WAI: Mission Mayors Mansion Started At %1",_position];
+diag_log format["WAI: Mission Medic Camp Started At %1",_position];
 
-//Mayors Mansion
-_baserunover = createVehicle ["Land_A_Villa_EP1",[(_position select 0), (_position select 1),0],[], 0, "CAN_COLLIDE"];
+//Medical Supply Camp
+_baserunover = createVehicle ["Land_fortified_nest_big",[(_position select 0) +15, (_position select 1) -20,0],[], 0, "CAN_COLLIDE"];
+_baserunover2 = createVehicle ["Land_Fort_Watchtower",[(_position select 0) +25, (_position select 1) +10,0],[], 0, "CAN_COLLIDE"];
 
 _rndnum = round (random 3) + 4;
 [[_position select 0, _position select 1, 0],4,1,"Random",4,"","TK_INS_Soldier_AT_EP1","Random",true] call spawn_group;
 [[_position select 0, _position select 1, 0],4,1,"Random",4,"","TK_INS_Soldier_AT_EP1","Random",true] call spawn_group;
 [[_position select 0, _position select 1, 0],4,1,"Random",4,"","TK_INS_Soldier_AT_EP1","Random",true] call spawn_group;
-[[_position select 0, _position select 1, 0],4,1,"Random",4,"","TK_INS_Soldier_AT_EP1","Random",true] call spawn_group;
+ 
+[_position,"Medical Supply Camp"] execVM "\z\addons\dayz_server\WAI\missions\compile\markers.sqf";
+[nil,nil,rTitleText,"Bandits have set up a medical re-supply camp! Check your map for the location!", "PLAIN",10] call RE;
 
-//The Mayor Himself
-[[_position select 0, _position select 1, 0],1,1,"Random",4,"","Functionary1_EP1_DZ","Random",true] call spawn_group;
- 
-[[[(_position select 0) - 15, (_position select 1) + 15, 8]],"M2StaticMG",0.8,"TK_INS_Soldier_AT_EP1",1,2,"","Random",true] call spawn_static;
-[[[(_position select 0) + 15, (_position select 1) - 15, 8]],"M2StaticMG",0.8,"TK_INS_Soldier_AT_EP1",1,2,"","Random",true] call spawn_static;
- 
-[_position,"Mayors Mansion"] execVM "\z\addons\dayz_server\WAI\missions\compile\markers.sqf";
-[nil,nil,rTitleText,"The Mayor has gone rogue, go take him and his task force out to claim the black market weapons!", "PLAIN",10] call RE;
 _missiontimeout = true;
 _cleanmission = false;
 _playerPresent = false;
@@ -47,8 +42,8 @@ if (_playerPresent) then {
 		{if((isPlayer _x) AND (_x distance _position <= 30)) then {_playerPresent = true};}forEach playableUnits;
 		(_playerPresent)
 	};
-	diag_log format["WAI: Mission Mayors Mansion Ended At %1",_position];
-	[nil,nil,rTitleText,"The rogue mayor has been taken out, who will be the next Mayor of Cherno?", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Medic Camp Ended At %1",_position];
+	[nil,nil,rTitleText,"Survivors have taken control of the medical supply camp.", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
 	deleteVehicle _box;
@@ -65,8 +60,8 @@ if (_playerPresent) then {
 	};
 	} forEach allUnits;
  
-	diag_log format["WAI: Mission Mayors Mansion At %1",_position];
-	[nil,nil,rTitleText,"The survivors were unable to capture the Mansion time is up!", "PLAIN",10] call RE;
+	diag_log format["WAI: Mission Medic Camp At %1",_position];
+	[nil,nil,rTitleText,"The survivors were unable to capture the medical supply camp time is up!", "PLAIN",10] call RE;
 };
  
 missionrunning = false;

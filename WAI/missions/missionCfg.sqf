@@ -16,7 +16,9 @@ wai_missions = [
 "mayors_mansion",
 "convoy",
 "C130_crash",
-"ems_cache"
+"ems_cache",
+"medi_camp"
+"Ural"
 ];
 
 // fuel the mission vehicles spawn with 0-100.

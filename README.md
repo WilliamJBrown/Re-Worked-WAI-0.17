@@ -6,7 +6,7 @@ Credits: Markk311, Lazyink, TheSzerdi, Falcyn , TAWTonic, EPOCH DEV's
 
 Current Development done by williamjbrown, firefly, fuchs
 
-* Current Version 0.16 
+* Current Version based on 0.16 
 * Wicked Mission System  Features (WIP)
 * Adds more options to ammo boxes 
 * tweaks to missions 
@@ -65,3 +65,10 @@ Go to server_monitor.sqf located in the system folder in your server.pbo
 Understanding  BIS_fnc_findSafePos
 
     http://tactical.nekromantix.com/wiki/doku.php?id=arma2:scripting:bis_fnc_findsafepos
+	
+*Already ported EMS Missions:
+
+Major : SM1,2,3,5
+
+
+Minor : None	
