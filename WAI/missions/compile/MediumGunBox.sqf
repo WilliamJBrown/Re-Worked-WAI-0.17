@@ -16,7 +16,7 @@ _box addWeaponCargoGlobal ["RPK_74", 1];
 _box addWeaponCargoGlobal ["M4A1_AIM_SD_camo", 1];
 
 // PISTOLS
-_box addWeaponCargoGlobal ["glock17_EP1", 1];
+_box addWeaponCargoGlobal ["Glock17_EP1", 1];
 _box addWeaponCargoGlobal ["UZI_EP1", 1];
 
 // AMMUNITION
@@ -41,4 +41,4 @@ _box addMagazineCargoGlobal ["Skin_Soldier1_DZ", 2];
 _box addMagazineCargoGlobal ["Skin_Camo1_DZ", 2];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_British_ACU', 2];
+_box addBackpackCargoGlobal ["DZ_British_ACU", 2];
