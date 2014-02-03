@@ -34,4 +34,4 @@ _box addWeaponCargoGlobal ["ItemToolbox", 2];
 _box addWeaponCargoGlobal ["ItemCompass", 2];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_British_ACU', 2];
+_box addBackpackCargoGlobal ["DZ_British_ACU", 2];
