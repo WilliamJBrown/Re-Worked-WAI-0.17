@@ -17,7 +17,7 @@ wai_missions = [
 "convoy",
 "C130_crash",
 "ems_cache",
-"medi_camp"
+"medi_camp",
 "Ural"
 ];
 
