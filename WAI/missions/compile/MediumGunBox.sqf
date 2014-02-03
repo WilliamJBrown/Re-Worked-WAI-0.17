@@ -16,7 +16,7 @@ _box addWeaponCargoGlobal ["RPK_74", 1];
 _box addWeaponCargoGlobal ["M4A1_AIM_SD_camo", 1];
 
 // PISTOLS
-_box addWeaponCargoGlobal ["Glock17_EP1", 1];
+_box addWeaponCargoGlobal ["glock17_EP1", 1];
 _box addWeaponCargoGlobal ["UZI_EP1", 1];
 
 // AMMUNITION
