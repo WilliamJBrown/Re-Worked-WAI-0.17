@@ -15,4 +15,4 @@ _box addMagazineCargoGlobal ["100Rnd_127x99_M2", 5];
 _box addMagazineCargoGlobal ["150Rnd_127x107_DSHKM", 5];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_LargeGunBag_EP1', 1];
+_box addBackpackCargoGlobal ["DZ_LargeGunBag_EP1", 1];
