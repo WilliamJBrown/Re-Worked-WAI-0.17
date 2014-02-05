@@ -41,4 +41,4 @@ _box addMagazineCargoGlobal ["Skin_Soldier1_DZ", 2];
 _box addMagazineCargoGlobal ["Skin_Camo1_DZ", 2];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_British_ACU', 2];
+_box addBackpackCargoGlobal ["DZ_British_ACU", 2];

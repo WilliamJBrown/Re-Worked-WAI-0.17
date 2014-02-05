@@ -50,4 +50,4 @@ _box addWeaponCargoGlobal ["ItemCrowbar", 2];
 _box addWeaponCargoGlobal ["ItemKnife", 2];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_LargeGunBag_EP1', 2];
+_box addBackpackCargoGlobal ["DZ_LargeGunBag_EP1", 2];

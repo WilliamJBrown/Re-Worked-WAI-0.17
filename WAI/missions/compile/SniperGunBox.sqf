@@ -34,4 +34,4 @@ _box addWeaponCargoGlobal ["Binocular_Vector", 2];
 _box addMagazineCargoGlobal ["Skin_Sniper1_DZ", 2];
 
 // BACKPACKS
-_box addBackpackCargoGlobal ['DZ_LargeGunBag_EP1', 2];
+_box addBackpackCargoGlobal ["DZ_LargeGunBag_EP1", 2];
