@@ -68,7 +68,7 @@ if (_playerPresent) then {
 		(_playerPresent)
 	};
 	diag_log format["WAI: Mission Weapon cache Ended At %1",_position];
-	[nil,nil,rTitleText,"Survivors have secured the Wepaon Cache!", "PLAIN",10] call RE;
+	[nil,nil,rTitleText,"Survivors have secured the Weapon Cache!", "PLAIN",10] call RE;
 } else {
 	clean_running_mission = True;
 	deleteVehicle _box;
