@@ -191,7 +191,7 @@ ai_wep3 = [
 ["SCAR_H_LNG_Sniper_SD","20rnd_762x51_SB_SCAR"], 
 ["SVD_CAMO","10Rnd_762x54_SVD"], 
 ["VSS_Vintorez","20Rnd_9x39_SP5_VSS"], 
-["DMR","20Rnd_762x51_DMR"], 
+["DMR_DZ","20Rnd_762x51_DMR"], 
 ["M40A3","5Rnd_762x51_M24"]
 ];
 
