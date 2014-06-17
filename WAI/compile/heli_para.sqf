@@ -80,6 +80,7 @@ _unitGroup setCombatMode "RED";
 _wp = _unitGroup addWaypoint [[(_position select 0), (_position select 1)], 0];
 _wp setWaypointType "MOVE";
 _wp setWaypointCompletionRadius 100;
+_DeleteP=[];
 
 _drop = True;
 _helipos = getpos _helicopter;
@@ -151,6 +152,7 @@ while {(alive _helicopter) AND (_drop)} do {
 			ai_ground_units = (ai_ground_units + 1);
 			_para addEventHandler ["Killed",{[_this select 0, _this select 1, "ground"] call on_kill;}];
 			_chute = createVehicle ["ParachuteEast", [(_helipos select 0), (_helipos select 1), (_helipos select 2)], [], 0, "NONE"];
+			_DeleteP=_DeleteP + [_chute];			
 			_para moveInDriver _chute;
 			[_para] joinSilent _pgroup;
 			sleep 1.5;
@@ -190,6 +192,6 @@ if (_helipatrol) then {
 	};
 };
 
-
-	
+sleep 45;
+{deleteVehicle _x} forEach _DeleteP;	
 	
