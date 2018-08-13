@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////
 ///Use the built in mission system (config file for mission system in mission folder)
-ai_mission_sysyem = True;
+ai_mission_system = True;
 
 ///////////////////////////////////////////////////////
 /// clears all Weapons and Magazines off body on death
